@@ -14,7 +14,7 @@
       margin: 0;
       padding: 0;
       font-family: 'Inter', sans-serif;
-      background-color: #ffffff;
+      background: linear-gradient(145deg, #f9f9f9, #e6eaf0);
       color: #333;
     }
 
@@ -24,58 +24,88 @@
     }
 
     header img {
-      max-width: 200px;
+      max-width: 220px;
       margin-bottom: 20px;
     }
 
     .hero {
       text-align: center;
-      padding: 20px;
+      padding: 40px 20px;
+      background-color: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      margin: 0 auto 40px;
+      max-width: 800px;
     }
 
     .hero h1 {
-      font-size: 2.5rem;
-      margin-bottom: 10px;
+      font-size: 2.8rem;
+      margin-bottom: 15px;
     }
 
     .hero p {
-      font-size: 1.2rem;
+      font-size: 1.3rem;
       margin-bottom: 30px;
+      color: #555;
     }
 
     .hero a {
       background-color: #005eff;
       color: white;
-      padding: 12px 24px;
+      padding: 12px 30px;
       border: none;
-      border-radius: 5px;
+      border-radius: 8px;
       text-decoration: none;
       font-weight: 600;
+      font-size: 1rem;
+      box-shadow: 0 3px 6px rgba(0, 94, 255, 0.3);
+      transition: background-color 0.3s;
+    }
+
+    .hero a:hover {
+      background-color: #0047c0;
     }
 
     .section {
-      padding: 50px 20px;
+      padding: 60px 20px;
       text-align: center;
-      border-top: 1px solid #eee;
     }
 
     .section h2 {
-      font-size: 2rem;
+      font-size: 2.2rem;
       margin-bottom: 20px;
+      color: #222;
+    }
+
+    .section p {
+      max-width: 700px;
+      margin: 0 auto;
+      font-size: 1.1rem;
+      color: #444;
     }
 
     .services {
-      display: flex;
-      flex-direction: column;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 30px;
-      max-width: 800px;
-      margin: 0 auto;
+      margin-top: 40px;
     }
 
     .service {
-      border: 1px solid #ddd;
+      background-color: #fff;
       border-radius: 10px;
       padding: 30px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    .service h3 {
+      margin-bottom: 15px;
+      color: #111;
+    }
+
+    .service p {
+      color: #555;
+      font-size: 1rem;
     }
 
     footer {
@@ -83,6 +113,7 @@
       font-size: 0.9rem;
       color: #777;
       padding: 40px 20px 20px;
+      background-color: #f4f4f4;
     }
   </style>
 </head>
@@ -123,7 +154,7 @@
 
   <section class="section" id="contacto">
     <h2>¿Querés transformar tu negocio con tecnología?</h2>
-    <a href="mailto:contacto@tactori.com">Escribinos</a>
+    <a href="mailto:contacto@tactori.com" style="display: inline-block; margin-top: 20px; background-color: #005eff; color: #fff; padding: 12px 24px; border-radius: 6px; text-decoration: none; font-weight: 600;">Escribinos</a>
   </section>
 
   <footer>
