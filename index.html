@@ -96,6 +96,12 @@
       border-radius: 10px;
       padding: 30px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .service:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
     }
 
     .service h3 {
@@ -106,6 +112,25 @@
     .service p {
       color: #555;
       font-size: 1rem;
+    }
+
+    .logos {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 40px;
+      margin-top: 40px;
+    }
+
+    .logos img {
+      max-height: 60px;
+      opacity: 0.8;
+      transition: opacity 0.3s;
+    }
+
+    .logos img:hover {
+      opacity: 1;
     }
 
     footer {
@@ -148,6 +173,15 @@
         <h3>Implementación de Cobots</h3>
         <p>Integramos robots colaborativos (Cobots) en tus procesos industriales. Somos partners de Omron y aplicamos soluciones reales con retorno concreto.</p>
       </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Partners tecnológicos</h2>
+    <div class="logos">
+      <img src="odoo_logo.png" alt="Odoo logo">
+      <img src="omron_logo.png" alt="Omron logo">
+      <img src="software_icon.png" alt="Software icon">
     </div>
   </section>
 
