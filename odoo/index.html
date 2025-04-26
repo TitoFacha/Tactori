@@ -6,88 +6,176 @@
   <title>Odoo - Tactori</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --primary: #7c3aed;
+      --primary-dark: #5b21b6;
+      --accent: #4c1d95;
+      --bg: #f4f6fa;
+    }
+
     body {
       margin: 0;
-      padding: 0;
       font-family: 'Inter', sans-serif;
-      background-color: #f4f6fa;
+      background-color: var(--bg);
       color: #333;
     }
 
-    header {
+    nav {
+      background: white;
+      padding: 16px 32px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav img {
+      max-height: 50px;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      color: white;
+      padding: 100px 20px;
       text-align: center;
-      padding: 50px 20px 30px;
-      background-color: #ffffff;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
     }
 
-    header img {
-      max-width: 220px;
+    .hero h1 {
+      font-size: 3.2rem;
+      margin-bottom: 20px;
     }
 
-    main {
-      padding: 60px 20px;
-      max-width: 960px;
+    .hero p {
+      font-size: 1.3rem;
+      max-width: 700px;
       margin: auto;
+    }
+
+    .section {
+      padding: 80px 20px;
       text-align: center;
     }
 
-    h1 {
-      font-size: 2.6rem;
-      margin-bottom: 15px;
+    .section h2 {
+      font-size: 2.4rem;
+      margin-bottom: 30px;
     }
 
-    h2 {
-      font-size: 1.5rem;
-      font-weight: 400;
-      color: #666;
-      margin-bottom: 40px;
+    .features, .steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 40px;
+      max-width: 1000px;
+      margin: auto;
     }
 
-    p {
-      font-size: 1.2rem;
-      max-width: 720px;
-      margin: 0 auto 30px;
-      color: #555;
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      transition: 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h3 {
+      color: var(--primary);
+      margin-bottom: 12px;
+    }
+
+    .cta-section {
+      background: #fff;
+      text-align: center;
+      padding: 80px 20px;
     }
 
     .cta-button {
-      background: linear-gradient(135deg, #7c3aed, #5b21b6);
+      background: linear-gradient(135deg, var(--primary), var(--accent));
       color: #fff;
-      padding: 14px 28px;
+      padding: 16px 32px;
       font-weight: 600;
       text-decoration: none;
       border-radius: 8px;
       font-size: 1rem;
-      box-shadow: 0 4px 10px rgba(124, 58, 237, 0.3);
-      transition: background 0.3s ease;
+      display: inline-block;
+      margin-top: 30px;
+      transition: 0.3s;
     }
 
     .cta-button:hover {
-      background: linear-gradient(135deg, #6b21a8, #4c1d95);
+      background: linear-gradient(135deg, var(--accent), var(--primary-dark));
     }
 
     footer {
+      background: #fff;
+      border-top: 1px solid #e2e8f0;
       text-align: center;
+      padding: 40px 20px;
       font-size: 0.9rem;
       color: #777;
-      padding: 40px 20px 20px;
-      background-color: #ffffff;
-      border-top: 1px solid #e2e8f0;
     }
   </style>
 </head>
 <body>
-  <header>
-    <img src="/Tactori_Logo.png" alt="Logo de Tactori" />
-  </header>
+  <nav>
+    <img src="/Tactori_Logo.png" alt="Tactori Logo">
+  </nav>
 
-  <main>
-    <h1>Implementación de Odoo</h1>
-    <h2>Somos Integration Partner oficial de Odoo en Argentina</h2>
-    <p>En Tactori transformamos la gestión empresarial con Odoo, el ERP más flexible y potente del mercado. Desde la implementación inicial hasta la integración total con tus procesos, hacemos que Odoo se adapte a tu negocio.</p>
-    <p>Te acompañamos con diagnóstico, configuración, desarrollo de módulos personalizados, migración de datos, formación de usuarios y soporte post-implementación.</p>
-    <p>Tenemos experiencia real en manufactura, logística, comercio y servicios. Sabemos cómo acompañarte en una transformación tecnológica real.</p>
-    <a href="mailto:contacto@tactori.com" class="cta-button">Solicitar una demo</a>
-  </main>
+  <section class="hero">
+    <h1>Somos Integration Partner oficial de Odoo</h1>
+    <p>Digitalizamos y conectamos cada parte de tu empresa con soluciones modulares, escalables y personalizadas.</p>
+  </section>
 
+  <section class="section">
+    <h2>¿Por qué elegirnos?</h2>
+    <div class="features">
+      <div class="card">
+        <h3>Consultoría real</h3>
+        <p>Te ayudamos a definir procesos antes de implementarlos. Nuestro diferencial es que entendemos operación.</p>
+      </div>
+      <div class="card">
+        <h3>Desarrollo a medida</h3>
+        <p>Adaptamos Odoo a tu forma de trabajar, no al revés. Creamos módulos propios y automatizamos tareas repetitivas.</p>
+      </div>
+      <div class="card">
+        <h3>Integraciones eficientes</h3>
+        <p>Conectamos Odoo con tus sistemas existentes: ecommerce, contabilidad, logística, BI, y más.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>¿Cómo trabajamos?</h2>
+    <div class="steps">
+      <div class="card">
+        <h3>1. Relevamiento</h3>
+        <p>Conocemos tu negocio y diseñamos el alcance técnico y funcional del proyecto Odoo.</p>
+      </div>
+      <div class="card">
+        <h3>2. Implementación</h3>
+        <p>Configuramos, migramos, desarrollamos y lanzamos tu plataforma adaptada 100% a tu operación.</p>
+      </div>
+      <div class="card">
+        <h3>3. Formación y soporte</h3>
+        <p>Capacitamos a tu equipo y te acompañamos para asegurar una adopción exitosa.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <h2>Transformá tu empresa con Odoo</h2>
+    <p>Desde manufactura y logística hasta ventas y finanzas, conectamos todo en un solo lugar.</p>
+    <a href="mailto:contacto@tactori.com" class="cta-button">Solicitá una demo gratuita</a>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Tactori. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>
