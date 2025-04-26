@@ -6,43 +6,83 @@
   <title>Tactori</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600&display=swap" rel="stylesheet">
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       padding: 0;
       font-family: 'Inter', sans-serif;
       background-color: #ffffff;
       color: #333;
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
     }
 
     header {
-      padding: 40px 0 20px;
+      text-align: center;
+      padding: 60px 20px 40px;
     }
 
     header img {
-      max-width: 240px;
+      max-width: 200px;
+      margin-bottom: 20px;
     }
 
-    main {
+    .hero {
+      text-align: center;
       padding: 20px;
     }
 
-    h1 {
-      font-size: 1.8rem;
-      font-weight: 500;
-      margin: 0;
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+    }
+
+    .hero a {
+      background-color: #005eff;
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .section {
+      padding: 50px 20px;
+      text-align: center;
+      border-top: 1px solid #eee;
+    }
+
+    .section h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .services {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .service {
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 30px;
     }
 
     footer {
-      margin-top: auto;
-      padding: 20px;
+      text-align: center;
       font-size: 0.9rem;
       color: #777;
+      padding: 40px 20px 20px;
     }
   </style>
 </head>
@@ -51,13 +91,43 @@
     <img src="Tactori_Logo.png" alt="Logo de Tactori">
   </header>
 
-  <main>
-    <h1>Transformamos empresas para que crezcan con estrategia y eficiencia.</h1>
-  </main>
+  <section class="hero">
+    <h1>Tecnología para hacer crecer tu negocio</h1>
+    <p>Soluciones a medida + Odoo para empresas reales.</p>
+    <a href="#contacto">Agenda una reunión</a>
+  </section>
+
+  <section class="section">
+    <h2>¿Qué hacemos?</h2>
+    <p>En Tactori acompañamos a empresas a resolver desafíos de gestión, productividad y escalabilidad a través del desarrollo de software a medida y la implementación profesional de Odoo.</p>
+  </section>
+
+  <section class="section">
+    <h2>Servicios</h2>
+    <div class="services">
+      <div class="service">
+        <h3>Software a Medida</h3>
+        <p>Desarrollamos aplicaciones web y móviles, sistemas internos de gestión, automatización de procesos y soluciones adaptadas a tu negocio.</p>
+      </div>
+      <div class="service">
+        <h3>Implementación de Odoo</h3>
+        <p>Somos especialistas en Odoo. Configuramos, adaptamos e implementamos la herramienta para optimizar tu operación.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>¿Por qué elegir Tactori?</h2>
+    <p>Tenemos experiencia en industria real, aplicamos metodologías ágiles y brindamos soporte cercano, humano y orientado a resultados.</p>
+  </section>
+
+  <section class="section" id="contacto">
+    <h2>¿Querés transformar tu negocio con tecnología?</h2>
+    <a href="mailto:contacto@tactori.com">Escribinos</a>
+  </section>
 
   <footer>
     <p>&copy; 2025 Tactori. Todos los derechos reservados.</p>
   </footer>
 </body>
 </html>
-
