@@ -43,26 +43,30 @@
       margin-bottom: 15px;
     }
 
-    .hero p {
-      font-size: 1.3rem;
-      margin-bottom: 30px;
-      color: #555;
+    .hero-buttons {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      margin-top: 30px;
     }
 
-    .hero a {
+    .hero-buttons a {
       background-color: #005eff;
       color: white;
-      padding: 12px 30px;
+      padding: 14px 36px;
       border: none;
       border-radius: 8px;
       text-decoration: none;
       font-weight: 600;
-      font-size: 1rem;
+      font-size: 1.1rem;
       box-shadow: 0 3px 6px rgba(0, 94, 255, 0.3);
       transition: background-color 0.3s;
+      width: 250px;
+      text-align: center;
     }
 
-    .hero a:hover {
+    .hero-buttons a:hover {
       background-color: #0047c0;
     }
 
@@ -84,36 +88,6 @@
       color: #444;
     }
 
-    .services {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 30px;
-      margin-top: 40px;
-    }
-
-    .service {
-      background-color: #fff;
-      border-radius: 10px;
-      padding: 30px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-
-    .service:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-    }
-
-    .service h3 {
-      margin-bottom: 15px;
-      color: #111;
-    }
-
-    .service p {
-      color: #555;
-      font-size: 1rem;
-    }
-
     footer {
       text-align: center;
       font-size: 0.9rem;
@@ -130,31 +104,26 @@
 
   <section class="hero">
     <h1>Tecnología para hacer crecer tu negocio</h1>
-    <p>Impulsamos tu empresa con soluciones digitales, automatización inteligente y robótica colaborativa.</p>
-    <a href="#contacto">Agenda una reunión</a>
-  </section>
-
-  <section class="section">
-    <h2>¿Qué hacemos?</h2>
-    <p>En Tactori ayudamos a empresas a crecer mediante tecnología: desarrollamos software a medida, implementamos Odoo y aplicamos robótica colaborativa como partners oficiales de Omron en Argentina.</p>
-  </section>
-
-  <section class="section">
-    <h2>Servicios</h2>
-    <div class="services">
-      <div class="service">
-        <h3>Software a Medida</h3>
-        <p>Desarrollamos aplicaciones web y móviles, sistemas internos de gestión, automatización de procesos y soluciones adaptadas a tu negocio.</p>
-      </div>
-      <div class="service">
-        <h3>Implementación de Odoo</h3>
-        <p>Somos especialistas en Odoo. Configuramos, adaptamos e implementamos la herramienta para optimizar tu operación.</p>
-      </div>
-      <div class="service">
-        <h3>Implementación de Cobots</h3>
-        <p>Integramos robots colaborativos (Cobots) en tus procesos industriales. Somos partners de Omron y aplicamos soluciones reales con retorno concreto.</p>
-      </div>
+    <div class="hero-buttons">
+      <a href="#odoo">Implementación de Odoo</a>
+      <a href="#software">Software a Medida</a>
+      <a href="#cobots">Robots Colaborativos</a>
     </div>
+  </section>
+
+  <section class="section" id="odoo">
+    <h2>Implementación de Odoo</h2>
+    <p>Somos especialistas en Odoo. Configuramos, adaptamos e implementamos la herramienta para optimizar tu operación.</p>
+  </section>
+
+  <section class="section" id="software">
+    <h2>Software a Medida</h2>
+    <p>Desarrollamos aplicaciones web y móviles, sistemas internos de gestión, automatización de procesos y soluciones adaptadas a tu negocio.</p>
+  </section>
+
+  <section class="section" id="cobots">
+    <h2>Implementación de Cobots</h2>
+    <p>Integramos robots colaborativos (Cobots) en tus procesos industriales. Somos partners de Omron y aplicamos soluciones reales con retorno concreto.</p>
   </section>
 
   <section class="section">
