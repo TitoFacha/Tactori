@@ -1,136 +1,134 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tactori</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Software Factory - Tactori</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600&display=swap" rel="stylesheet">
   <style>
-    * {
-      box-sizing: border-box;
+    :root {
+      --primary: #c00000;
+      --accent: #000000;
+      --light: #f5f7fa;
     }
 
     body {
       margin: 0;
-      padding: 0;
       font-family: 'Inter', sans-serif;
-      background: #f4f6fa;
+      background-color: var(--light);
       color: #333;
     }
 
-    header {
-      text-align: center;
-      padding: 60px 20px 40px;
-      background-color: #ffffff;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    nav {
+      background: white;
+      padding: 16px 32px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
 
-    header img {
-      max-width: 240px;
-      margin-bottom: 10px;
+    nav img {
+      max-height: 90px;
     }
 
     .hero {
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      color: white;
+      padding: 100px 20px;
       text-align: center;
-      padding: 60px 20px;
-      max-width: 900px;
-      margin: auto;
     }
 
     .hero h1 {
-      font-size: 2.8rem;
-      margin-bottom: 40px;
+      font-size: 3rem;
+      margin-bottom: 20px;
     }
 
-    .hero-buttons {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 30px;
-    }
-
-    .hero-buttons a {
-      background: linear-gradient(135deg, #005eff, #3a8bff);
-      color: white;
-      padding: 18px 30px;
-      border-radius: 12px;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 1.1rem;
-      box-shadow: 0 6px 12px rgba(0, 94, 255, 0.2);
-      transition: transform 0.2s, box-shadow 0.2s;
-      min-width: 240px;
-      text-align: center;
-    }
-
-    .hero-buttons a:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 10px 20px rgba(0, 94, 255, 0.25);
+    .hero p {
+      font-size: 1.3rem;
+      max-width: 700px;
+      margin: auto;
     }
 
     .section {
-      padding: 60px 20px;
+      padding: 80px 20px;
       text-align: center;
     }
 
     .section h2 {
       font-size: 2.2rem;
       margin-bottom: 20px;
-      color: #222;
     }
 
     .section p {
-      max-width: 700px;
-      margin: 0 auto;
+      max-width: 800px;
+      margin: 0 auto 40px;
       font-size: 1.1rem;
-      color: #444;
+      color: #555;
     }
 
-    .contact-button {
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 40px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      transition: 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h3 {
+      color: var(--primary);
+      margin-bottom: 12px;
+    }
+
+    .cta-button {
+      background: var(--primary);
+      color: #fff;
+      padding: 14px 28px;
+      font-weight: 600;
+      text-decoration: none;
+      border-radius: 8px;
       display: inline-block;
       margin-top: 20px;
-      background: linear-gradient(135deg, #005eff, #3a8bff);
-      color: #fff;
-      padding: 14px 30px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 1rem;
-      box-shadow: 0 4px 10px rgba(0, 94, 255, 0.2);
       transition: background 0.3s ease;
     }
 
-    .contact-button:hover {
-      background: linear-gradient(135deg, #0047c0, #2f6fe3);
+    .cta-button:hover {
+      background: var(--accent);
     }
 
     footer {
+      background: #fff;
       text-align: center;
+      padding: 40px 20px;
+      border-top: 1px solid #e2e8f0;
       font-size: 0.9rem;
       color: #777;
-      padding: 40px 20px 20px;
-      background-color: #ffffff;
-      border-top: 1px solid #e2e8f0;
     }
   </style>
 </head>
 <body>
-  <header>
-    <img src="Tactori_Logo.png" alt="Logo de Tactori">
-  </header>
+  <nav>
+    <img src="/Tactori_Logo.png" alt="Tactori Logo">
+  </nav>
 
   <section class="hero">
-    <h1>Tecnología para hacer crecer tu negocio</h1>
-    <div class="hero-buttons">
-      <a href="/odoo/">Odoo Integration Partner</a>
-      <a href="software.html">Software a Medida</a>
-      <a href="cobots.html">Robots Colaborativos</a>
-    </div>
-  </section>
-
-  <section class="section" id="contacto">
-    <h2>¿Querés transformar tu negocio con tecnología?</h2>
-    <a href="mailto:contacto@tactori.com" class="contact-button">Escribinos</a>
+    <h1>Somos una empresa de ingenieros con pasión por hacer crecer tu negocio a través de la tecnología</h1>
+    <p>En Tactori ayudamos a empresas a crecer, digitalizarse y ganar eficiencia mediante soluciones tecnológicas concretas, accesibles y adaptadas a su realidad.</p>
   </section>
 
   <footer>
